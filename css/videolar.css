@@ -1,0 +1,301 @@
+body {
+  background: radial-gradient(
+    circle at top,
+    #1a0505 0%,
+    #0b0b0b 40%,
+    #050505 100%
+  );
+  color: #ffffff;
+}
+
+
+/* NAVBAR */
+.navbar-area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(10, 10, 10, 0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ff1e1e;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #ff1e1e;
+  transform: translateY(-2px);
+}
+
+/* 3D hover */
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff1e1e;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-menu ul li a:hover::after {
+  width: 100%;
+}
+
+
+
+
+/* Footer */
+.otopedia-footer {
+     background: linear-gradient(135deg,#ff7b00 , #ff2a2a , #480101);
+    color: #ffffff;
+    padding: 60px 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #090909;
+    line-height: 1.6;
+}
+
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fd0000;
+    padding-left: 5px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 22px;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #050505;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #cccccc;
+}
+
+/* MOBİL UYUMLU */
+@media (max-width: 768px) {
+    .footer-logo {
+        text-align: center;
+    }
+    .footer-text,
+    .footer-title,
+    .footer-links,
+    .footer-social {
+        text-align: center;
+    }
+}
+/* SAYFA → FOOTER BOŞLUK */
+.video-page,
+.media-gallery,
+.featured-articles {
+  padding-bottom: 120px;
+}
+
+/* FOOTER (KÜÇÜLTÜLMÜŞ + AYRILMIŞ) */
+.otopedia-footer {
+  position: relative;
+  margin-top: 80px;
+  padding: 40px 0 15px; /* küçültüldü */
+   background: linear-gradient(135deg,#ff7b00 , #ff2a2a , #480101);
+  box-shadow: 0 -25px 60px rgba(0,0,0,0.85);
+}
+
+/* YUMUŞAK GEÇİŞ */
+.otopedia-footer::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0,0,0,0.85)
+  );
+}
+
+/* FOOTER YAZILARINI DAHA KOMPAKT */
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.footer-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-social a {
+  font-size: 20px;
+}
+
+/* ALT KISIM DAHA SIK */
+.footer-bottom {
+  margin-top: 25px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+
+
+
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.social-btn i {
+  font-size: 18px;
+}
+
+/* EMAIL */
+.social-btn.mail {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+.social-btn.mail:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(75,108,183,0.5);
+}
+
+/* INSTAGRAM */
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-btn.instagram:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(221,42,123,0.5);
+}
+
+/* YOUTUBE */
+.social-btn.youtube {
+  background: #ff0000;
+}
+
+.social-btn.youtube:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,0,0,0.45);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-admin-logo img {
+  width: 45px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-admin-logo img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+
+
